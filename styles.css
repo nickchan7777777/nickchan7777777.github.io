@@ -464,6 +464,86 @@ iframe {
     margin-bottom: 0;
 }
 
+.docs-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 34px;
+    align-items: start;
+    padding-bottom: 84px;
+}
+
+.docs-sidebar {
+    position: sticky;
+    top: 92px;
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: 0 12px 28px rgba(35, 29, 20, 0.06);
+}
+
+.docs-sidebar a {
+    padding: 9px 10px;
+    border-radius: 6px;
+    color: var(--muted);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.docs-sidebar a:hover {
+    background: var(--bg);
+    color: var(--green-dark);
+}
+
+.docs-content {
+    display: grid;
+    gap: 24px;
+}
+
+.docs-content > section {
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: 0 14px 34px rgba(35, 29, 20, 0.07);
+}
+
+.resource-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--green-dark);
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.resource-button.secondary {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--green-dark);
+}
+
+.pdf-preview {
+    display: block;
+    width: 100%;
+    min-height: 720px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--bg);
+}
+
 footer {
     width: min(1180px, calc(100% - 36px));
     margin: 0 auto;
@@ -496,6 +576,7 @@ footer p {
     .hero,
     .project-row,
     .plant-feature,
+    .docs-layout,
     .timeline-items section,
     .timeline-items,
     .bio-grid {
@@ -511,6 +592,14 @@ footer p {
     .timeline-items section > p:last-child {
         grid-column: 1;
         grid-row: auto;
+    }
+
+    .docs-sidebar {
+        position: static;
+    }
+
+    .pdf-preview {
+        min-height: 520px;
     }
 
     .hero {
