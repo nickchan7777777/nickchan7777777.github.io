@@ -374,6 +374,10 @@ iframe {
     font-size: clamp(2rem, 4vw, 4rem);
 }
 
+.slide-title {
+    white-space: pre-line;
+}
+
 .plant-copy p:last-child {
     margin: 0;
     font-size: 1.05rem;

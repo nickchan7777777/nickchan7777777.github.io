@@ -5,6 +5,8 @@ carousels.forEach((carousel) => {
     const prev = carousel.querySelector("[data-carousel-prev]");
     const next = carousel.querySelector("[data-carousel-next]");
     const count = carousel.querySelector("[data-carousel-count]");
+    const titleTargetId = carousel.dataset.titleTarget;
+    const titleTarget = titleTargetId ? document.getElementById(titleTargetId) : null;
     let index = slides.findIndex((slide) => slide.classList.contains("active"));
 
     if (index < 0) {
@@ -18,6 +20,10 @@ carousels.forEach((carousel) => {
 
         if (count) {
             count.textContent = `${index + 1} / ${slides.length}`;
+        }
+
+        if (titleTarget && slides[index].dataset.title) {
+            titleTarget.textContent = slides[index].dataset.title;
         }
     };
 
