@@ -544,6 +544,21 @@ iframe {
     background: var(--bg);
 }
 
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 footer {
     width: min(1180px, calc(100% - 36px));
     margin: 0 auto;
@@ -625,6 +640,15 @@ footer p {
     .carousel-track img,
     .carousel.large .carousel-track img {
         min-height: 240px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
     }
 }
 

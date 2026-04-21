@@ -31,3 +31,35 @@ carousels.forEach((carousel) => {
         next.addEventListener("click", () => showSlide(index + 1));
     }
 });
+
+const revealTargets = document.querySelectorAll(
+    ".hero, .bio-grid article, .embedded-site, .page-intro, .project-row, .plant-feature, .timeline-period, .timeline-items section, .docs-content > section"
+);
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.16,
+            rootMargin: "0px 0px -8% 0px",
+        }
+    );
+
+    revealTargets.forEach((target, index) => {
+        target.dataset.reveal = "";
+        target.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
+        revealObserver.observe(target);
+    });
+} else {
+    revealTargets.forEach((target) => {
+        target.dataset.reveal = "";
+        target.classList.add("is-visible");
+    });
+}
