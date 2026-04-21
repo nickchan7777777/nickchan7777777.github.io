@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Nicholas Chan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">Nicholas Chan</a>
+        <nav class="tabs" aria-label="Primary navigation">
+            <a class="tab" href="index.html">Home</a>
+            <a class="tab active" href="projects.html">Projects</a>
+            <a class="tab" href="plants.html">Plants</a>
+            <a class="tab" href="experiences.html">Experiences</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Workshop Projects</p>
+            <h1>Hobby Builds</h1>
+            <p>Keyboard, electronics, and fabrication projects built around small-batch making, practical design constraints, and iterative prototyping.</p>
+        </section>
+
+        <section class="project-stack" aria-label="Hobby and workshop projects">
+            <article class="project-row">
+                <div class="project-copy">
+                    <p class="project-type">3D print and soldering</p>
+                    <h2>Numberpad</h2>
+                    <p>A compact numberpad project focused on the full build path: printed enclosure, soldered electronics, switch installation, firmware setup, and final desk-ready assembly. The firmware is written with KMK/CircuitPython and tracked in the <a href="https://github.com/nick33333/numpad-kmk-code">numpad KMK code repo</a>.</p>
+                </div>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-track">
+                        <img class="active" src="pics/red_numpad_thirst_trap.jpg" alt="Close up of red numberpad build">
+                        <img src="pics/red_and_blue_numpad.jpg" alt="Red and blue numberpad keyboard">
+                        <img src="pics/NumPad_Onshape_CAD.png" alt="Numberpad CAD assembly in Onshape">
+                    </div>
+                    <div class="carousel-controls">
+                        <button type="button" data-carousel-prev aria-label="Previous numberpad photo">&lt;</button>
+                        <span data-carousel-count>1 / 3</span>
+                        <button type="button" data-carousel-next aria-label="Next numberpad photo">&gt;</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-row reverse">
+                <div class="project-copy">
+                    <p class="project-type">Hand-wired keyboard</p>
+                    <h2>KBD67</h2>
+                    <p>A hand-wired KBD67 build that emphasizes clean matrix wiring, stabilizer tuning, switch placement, and the problem-solving that comes with wiring a keyboard without a PCB.</p>
+                </div>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-track">
+                        <img class="active" src="pics/kbd67.jpg" alt="Hand-wired KBD67 keyboard build">
+                        <img class="rotate-ccw" src="pics/kbd67_internals.jpg" alt="Internal wiring for hand-wired KBD67 keyboard">
+                    </div>
+                    <div class="carousel-controls">
+                        <button type="button" data-carousel-prev aria-label="Previous KBD67 photo">&lt;</button>
+                        <span data-carousel-count>1 / 2</span>
+                        <button type="button" data-carousel-next aria-label="Next KBD67 photo">&gt;</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-row">
+                <div class="project-copy">
+                    <p class="project-type">Ergonomic design</p>
+                    <h2>Custom Ergo Keyboard</h2>
+                    <p>An ergonomic keyboard exploration with layout experiments, hand placement studies, and a build process centered on comfort, repeatability, and practical daily use.</p>
+                </div>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-track">
+                        <img class="active" src="pics/ergo.jpg" alt="Custom ergonomic keyboard">
+                        <img src="pics/ergo_internals.jpg" alt="Internal wiring for custom ergonomic keyboard">
+                        <img src="pics/ergo_OnshapeCAD.png" alt="Custom ergonomic keyboard CAD model">
+                    </div>
+                    <div class="carousel-controls">
+                        <button type="button" data-carousel-prev aria-label="Previous ergo keyboard photo">&lt;</button>
+                        <span data-carousel-count>1 / 3</span>
+                        <button type="button" data-carousel-next aria-label="Next ergo keyboard photo">&gt;</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-row reverse">
+                <div class="project-copy">
+                    <p class="project-type">Work in progress</p>
+                    <h2>100 Key Keyboard</h2>
+                    <p>A larger keyboard project currently in progress, designed as a more ambitious build with additional keys, layout decisions, CAD iteration, and more room to refine the enclosure and wiring plan.</p>
+                </div>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-track">
+                        <img class="active" src="pics/100key_OnshapeCAD.png" alt="100 key keyboard CAD model">
+                        <img src="pics/100key_pieces_CAD.png" alt="100 key keyboard CAD pieces">
+                    </div>
+                    <div class="carousel-controls">
+                        <button type="button" data-carousel-prev aria-label="Previous 100 key keyboard photo">&lt;</button>
+                        <span data-carousel-count>1 / 2</span>
+                        <button type="button" data-carousel-next aria-label="Next 100 key keyboard photo">&gt;</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nicholas Chan</p>
+    </footer>
+    <script src="site.js"></script>
+</body>
+
+</html>
