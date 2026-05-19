@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Quiz | Nicholas Chan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">Nicholas Chan</a>
+        <nav class="tabs" aria-label="Primary navigation">
+            <a class="tab" href="index.html">Home</a>
+            <a class="tab" href="projects.html">Projects</a>
+            <a class="tab active" href="cell-quiz.html">Cell Quiz</a>
+            <a class="tab" href="plants.html">Plants</a>
+            <a class="tab" href="experiences.html">Experiences</a>
+            <a class="tab" href="resources.html">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Interactive Personality Test</p>
+            <h1>What Hematopoietic Cell Are You?</h1>
+            <p>A lineage-themed personality quiz that maps your answers onto the hematopoietic system, from stem and progenitor states to mature immune, erythroid, and stromal identities.</p>
+        </section>
+
+        <section class="quiz-lab" aria-labelledby="quiz-title">
+            <div class="quiz-hero-card">
+                <div>
+                    <p class="project-type">Bone marrow logic</p>
+                    <h2 id="quiz-title">Fate-map your personality</h2>
+                    <p>This quiz weighs flexibility, specialization, immune style, communication, and repair instincts to place you somewhere in the hematopoietic tree.</p>
+                </div>
+                <div class="quiz-legend" aria-label="Quiz legend">
+                    <article>
+                        <span class="legend-dot stem"></span>
+                        <strong>Stem / progenitor</strong>
+                        <p>Open futures, branching potential, marrow bias.</p>
+                    </article>
+                    <article>
+                        <span class="legend-dot lymphoid"></span>
+                        <strong>Lymphoid</strong>
+                        <p>Adaptive memory, antibody logic, T and NK behavior.</p>
+                    </article>
+                    <article>
+                        <span class="legend-dot myeloid"></span>
+                        <strong>Myeloid</strong>
+                        <p>Patrolling, engulfing, presenting, and first-response work.</p>
+                    </article>
+                    <article>
+                        <span class="legend-dot erythroid"></span>
+                        <strong>Erythroid / megakaryocyte</strong>
+                        <p>Oxygen logistics, clotting, and high-throughput output.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="quiz-shell" data-hematopoietic-quiz></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nicholas Chan</p>
+    </footer>
+    <script src="site.js"></script>
+</body>
+
+</html>
